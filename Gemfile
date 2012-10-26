@@ -1,17 +1,17 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rails', '3.2.8'
+gem "rails", "3.2.8"
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem "rails", :git => "git://github.com/rails/rails.git"
 
 group :development, :test do
-  gem 'mysql2'
-  gem 'rspec-rails'
+  gem "mysql2"
+  gem "rspec-rails"
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 
 # Gems used only for assets and not required
@@ -22,26 +22,27 @@ group :assets do
   gem "twitter-bootstrap-rails"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  # gem "therubyracer", :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem "uglifier", ">= 1.0.3"
+  gem "haml-rails"
 end
 
-gem 'jquery-rails'
+gem "jquery-rails"
 
 gem "devise", "~> 2.1.2"
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# gem "bcrypt-ruby", "~> 3.0.0"
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# gem "jbuilder"
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem "unicorn"
 
 # Deploy with Capistrano
-# gem 'capistrano'
+# gem "capistrano"
 
 # To use debugger
-# gem 'debugger'
+# gem "debugger"
