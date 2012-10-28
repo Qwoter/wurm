@@ -1,1 +1,15 @@
-%h1 TODO: Show all courses
+%h3 Courses
+.row
+  / = @courses.each do |course|
+  - 20.times do
+    .span3
+      .well.well-small
+        %ul.thumbnails{:style=>"margin: 0 0;padding:0 auto;"}
+          %li.span2{:style=>"margin: 0 auto;width: 200px;"}
+            %a.thumbnail{:href => "#"}
+              %img{:alt => "", :src => "http://placehold.it/300x200"}
+            .tihe
+              = "Ruby Course"
+            .tihe
+              = "Lorem ipsum for my tysym"
+         

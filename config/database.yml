@@ -9,7 +9,7 @@ development:
   database: ag/development.mysql2
   pool: 5
   username: root
-  password: "1"
+  password: "12"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,7 +20,7 @@ test:
   database: ag/test.mysql2
   pool: 5
   username: root
-  password: "1"
+  password: "12"
 
 production:
   adapter: mysql2
@@ -28,4 +28,4 @@ production:
   database: ag/production.mysql2
   pool: 5
   username: root
-  password: "1"
+  password: "12"
