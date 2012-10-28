@@ -1,3 +1,4 @@
 class Course < ActiveRecord::Base
-  attr_accessible :body, :end_date, :start_date, :title
+  attr_accessible :body, :end_at, :start_at, :name
+  has_event_calendar
 end
