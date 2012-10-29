@@ -16,6 +16,7 @@
   </thead>
   <tbody>
     <% @courses.each do |course| %>
+      <%= debug(course.inspect) %>
       <tr>
         <td><%= link_to course.id, course_path(course) %></td>
         <td><%= course.title %></td>
