@@ -25,11 +25,10 @@ group :assets do
   # gem "therubyracer", :platforms => :ruby
 
   gem "uglifier", ">= 1.0.3"
-  gem "haml-rails"
 end
 
 gem "jquery-rails"
-
+gem "haml"
 gem "devise", "~> 2.1.2"
 
 # To use ActiveModel has_secure_password
