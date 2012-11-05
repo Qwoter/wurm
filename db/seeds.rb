@@ -12,8 +12,8 @@ users.each do |user|
   User.create(user)
 end
 
-courses = [{title: "Example Course", body: "You can do any examples in this course!", start_date: "2012-10-29", end_date: "2013-10-29"},
-           {title: "Running!", body: "Run Run Run Run Run Run Run Run Run Run Run Run Run...", start_date: "2012-10-29", end_date: "2012-12-31"}]
+courses = [{name: "Example Course", body: "You can do any examples in this course!", start_at: "2012-10-29", end_at: "2013-10-29"},
+           {name: "Running!", body: "Run Run Run Run Run Run Run Run Run Run Run Run Run...", start_at: "2012-10-29", end_at: "2012-12-31"}]
            
 courses.each do |course|
   Course.create(course)

@@ -1,10 +1,10 @@
 class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t|
-      t.string :title
+      t.string :name
       t.text :body
-      t.date :start_date
-      t.date :end_date
+      t.date :start_at
+      t.date :end_at
 
       t.timestamps
     end
