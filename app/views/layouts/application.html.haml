@@ -13,8 +13,12 @@
             %li= link_to "Lessons", courses_path
             %li= link_to "Calendar", calendar_path
           %ul.nav
-            %li= link_to "Login", "#"
-            %li= link_to "Sing_up", "#"
+            - if user_signed_in?
+              %li= link_to "Profile", edit_user_registration_path(current_user)
+              %li= link_to "Log out", destroy_user_session_path
+            - else
+              %li= link_to "Login", new_user_session_path
+              %li= link_to "Sing up", new_user_registration_path
     .container.hero-unit
       %p= notice
       %p= alert
