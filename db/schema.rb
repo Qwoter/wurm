@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20121029213718) do
 
   create_table "courses", :force => true do |t|
     t.string   "title"
-    t.string   "body"
+    t.text     "body"
     t.date     "start_date"
     t.date     "end_date"
     t.datetime "created_at", :null => false
