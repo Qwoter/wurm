@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#products { float:left; width: 500px; margin-right: 2em; }
+#courses { width: 400px; float: left; margin-top: 1em; }
+#courses ol { margin: 0; padding: 1em 0 1em 3em; }
+    
