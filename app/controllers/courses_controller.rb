@@ -1,6 +1,8 @@
 class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
+  # def calendar
+  # end
   def index
     @courses = Course.all
 

@@ -1,12 +1,15 @@
 Aggregator::Application.routes.draw do
-  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   devise_for :users
 
   root :to => 'courses_dashboard#index'
   # match 'calendar' => 'courses_calendar#index'
-  resources :courses
-
+  resources :courses do
+    collection do
+      get 'calendar'
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
