@@ -1,7 +1,13 @@
 <%- model_class = Course -%>
+
 <div class="page-header">
   <h1><%=t '.name', :default => model_class.model_name.human.pluralize %></h1>
 </div>
+
+<div class="row">
+  <div class="span3"></div>
+</div>
+
 <table class="table table-striped" >
   <thead>
     <tr>
@@ -41,3 +47,33 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_course_path,
             :class => 'btn btn-primary' %>
+
+<div id="courses">
+    <h4>User "<%= current_user.email %>"</h4>
+    <div>
+        <ol>
+            <li class="placeholder">Add your items here</li>
+        </ol>
+    </div>
+</div>
+
+<div id="products">
+    <div id="catalog">
+        <h4>Courses</h4>
+        <div>
+            <table class="table table-striped" >
+              <tbody>
+                <% @courses.each do |course| %>
+                  <tr>
+                    <td><%= course.name %></td>
+                    <td><%= course.body %></td>
+                    <td><%= course.start_at %></td>
+                    <td><%= course.end_at %></td>
+                  </tr>
+                <% end %>
+              </tbody>  
+            </table>
+        </div>
+    </div>
+</div>
+ 

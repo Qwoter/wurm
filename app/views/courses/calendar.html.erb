@@ -10,21 +10,29 @@
 		<%= calendar do |date|%>
 		<div class = "day">
 			<span class="m-dotted" id ="#example" onclick="$('#exampleModal').arcticmodal();">
-				<%= date.day %> 
-				<%= @count = Course.select{|c| c.start_at <= date && c.end_at >= date}.count %>
+
+				<div class = "dateselector">
+					<div id = "date_day">
+						<%= date.day %> 
+					</div>
+					<div id = "date_count">
+						<% @count = Course.select{|c| c.start_at <= date && c.end_at >= date}.count %>
+						<div class = "circle">
+							<% if @count != 0 %>
+								<%= @count %>
+							<% end %>
+					    </div>
+					</div>
+				</div>
 			</span>
 			<!-- блок нище не отримує змінну @my_date ! потрібно налагодити звязок jquery з calendar_controller -->
 			<div style="display: none;">
 			    <div class="b-modal" id="exampleModal">
 			        <div class="b-modal_close arcticmodal-close">X</div>
-			        <%= date %>
-			        <!-- роби!! щось -->
-			        <script type='text/javascript'>
-						var myDateVar = {
-						    myDate: "<%= date %>"
-						};
-					</script>
-			        <%= @current_courses = Course.select{|c| c.start_at <= @my_date && c.end_at >= @my_date} %>
+			        <%#= date %>
+			        <!--потрібно якимось чином передати сюди значення дати -->
+			        
+			        <% @current_courses = Course.select{|c| c.start_at <= @my_date && c.end_at >= @my_date} %>
 			        <% @current_courses.each do |course|%> 
 			        	<div class="black_color"><%= link_to course.name , course %></div>
 			        <% end %>
@@ -33,6 +41,7 @@
 			<div id ="start_date">
 			<% if @lessons_by_start_date[date] %>
 				<ul>
+					
 					<%= "Begin of courses:"%>
 					<% @lessons_by_start_date[date].each do |course| %>
 						<li>

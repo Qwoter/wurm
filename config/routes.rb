@@ -8,6 +8,7 @@ Aggregator::Application.routes.draw do
   resources :courses do
     collection do
       get 'calendar'
+      
     end
   end
   # The priority is based upon order of creation:

@@ -79,9 +79,11 @@
 }
 #start_date{
   background-color:#fff;
+  border-radius:5%
 }
 #end_date{
-  background-color:#bbb;
+  background-color:#ccc;
+  border-radius:5%
 }
 .counter{
   background-color: #D7F2FF;
@@ -115,4 +117,36 @@
 }*/
 #black_color{
   color: #999;
+}
+#date_day{
+  float:left;
+}
+#date_count{
+  text-align:right;
+}
+
+
+.dateselector{
+  background-color:white;
+  padding:0 5px;
+  border-radius:10%;
+  height: 18px;
+}
+
+.circle{
+  color:white;
+  display:inline;
+  padding-left:4px;
+  padding-right:4px;
+  background:rgb(196,15,24);
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
+a:hover {
+  color:red;
+  background-color: #D7F2FF;
+}
+li:hover{
+  
+  background-color: #D7F2FF;
 }
